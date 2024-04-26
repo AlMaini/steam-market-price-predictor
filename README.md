@@ -32,17 +32,20 @@ cd steam-market-price-predictor
 3. Run the script:
 
 ```
-python capsulepredictor.py
+python steamprd.py item_data.json
 ```
 
 This script will read the data from the `stockholm2021.json` file, perform SVR-based predictions on the item prices, and visualize the results.
 
 ## File Structure
 
-- `capsulepredictor.py`: Main Python script for reading JSON data, performing SVR-based predictions, and visualizing the results.
+- `steamprd.py`: Main Python script for reading JSON data, performing SVR-based predictions, and visualizing the results.
 - `stockholm2021.json`: JSON file containing the item price data.
 
 ## Data Format
+
+You can get the .json's from the steam market directly, using this URL:
+`https://steamcommunity.com/market/pricehistory/?appid=730&market_hash_name=INSERT%NAME%HERE`
 
 The JSON data should be formatted as follows:
 
