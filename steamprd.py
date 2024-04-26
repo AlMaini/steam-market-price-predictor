@@ -2,6 +2,11 @@ import json
 import numpy as np
 from sklearn.svm import SVR
 import matplotlib.pyplot as plt
+import argparse
+
+parser = argparse.ArgumentParser(description="Process input file.")
+parser.add_argument("input_file", help="Path to the input file.")
+args = parser.parse_args()
 
 month_abbr_to_num = {
     "Jan": "01",
@@ -66,15 +71,6 @@ def predict_prices(dates, prices, x):
 
 
 
-
-
-
-file = open("stockholm2021.json", 'r')
-
+file = open(args.input_file, 'r')
 dates, prices = parse_json(file)
-
 price_predict = predict_prices(dates, prices, 25)
-
-# Example usage:
-print("Dates:", dates)
-print("Prices:", prices)
