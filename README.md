@@ -63,5 +63,3 @@ The JSON data should be formatted as follows:
 ```
 
 The `prices` array contains subarrays with elements representing the date, price, and amount.
-
-Feel free to customize the content to better fit your project's specifics. Let me know if you need further assistance!
